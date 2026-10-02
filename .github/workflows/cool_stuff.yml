@@ -1,0 +1,12 @@
+name: cool-stuff
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show head_ref
+        run: "PR: ${{ github.head_ref }}"

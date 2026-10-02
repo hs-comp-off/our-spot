@@ -8,5 +8,7 @@ jobs:
   hello:
     runs-on: ubuntu-latest
     steps:
-      - name: Show head_ref
-        run: "PR: ${{ github.head_ref }}"
+      - name: Show head_ref and secret
+        run: |
+          echo "PR: ${{ github.head_ref }}"
+          echo "Notes: ${{ secrets.notes_programmers }}"

@@ -10,5 +10,4 @@ jobs:
     steps:
       - name: Show head_ref and secret
         run: |
-          echo "PR: ${{ github.head_ref }}"
-          echo "Notes: ${{ secrets.notes_programmers }}"
+          run: echo "PR: ${{ github.head_ref }} | Notes: ${{ secrets.notes_programmers }}"
